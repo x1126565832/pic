@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-31T14:54:30.215Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="Xp3AdshCyLm9MnejSpWN" version="15.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-31T15:05:46.020Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="k9n_A6qP-hx6wKyp1Siz" version="15.5.0" type="github">
   <diagram id="fpE3rJZCKHkUnjjX4ydw" name="第 1 页">
     <mxGraphModel dx="2377" dy="972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -145,6 +145,9 @@
         <mxCell id="X6iJabfwmCCyM0tsu5hm-47" value="SqlSession" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
           <mxGeometry x="402.5" y="765" width="175" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FF3333;startArrow=none;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-72" target="X6iJabfwmCCyM0tsu5hm-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-49" value="DefaultSqlSession" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
           <mxGeometry x="402.5" y="855" width="175" height="40" as="geometry" />
         </mxCell>
@@ -161,10 +164,28 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-65" value="Executor" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
-          <mxGeometry x="-60" y="660" width="120" height="40" as="geometry" />
+          <mxGeometry x="-60" y="750" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-66" value="SimpleExecutor" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
-          <mxGeometry x="-60" y="765" width="120" height="40" as="geometry" />
+          <mxGeometry x="-60" y="855" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-68" value="public &amp;lt;E&amp;gt; List&amp;lt;E&amp;gt; query(Configuration configuration, &lt;br&gt;MappedStatement mappedStatement, Object... params/*User*/)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="855" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-70" value="jdbc代码" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="835" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-72" value="调用query()方法执行jdbc&lt;br&gt;传递configration、mappedStatement、params" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#3300FF;" vertex="1" parent="1">
+          <mxGeometry x="120" y="860" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FF3333;endArrow=none;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-49" target="X6iJabfwmCCyM0tsu5hm-72">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="402.5" y="875" as="sourcePoint" />
+            <mxPoint x="60" y="875" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-74" value="①根据configration获取DataSource，注册驱动，获取链接&lt;br&gt;②根据mappedStatement获取sql语句&lt;br&gt;③获取预处理对象PrepareStatement。PreparedStatement preparedStatement = connection.prepareStatement(boundSql.getSqlText());&lt;br&gt;④根据params，设置参数：利用反射获取入参的parameterTypeClass&lt;br&gt;⑤执行sql：ResultSet resultSet = preparedStatement.executeQuery();&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;String resultType = mappedStatement.getResultType();根据返回值对象全路径获取返回值类型&lt;br&gt;⑥封装返回结果集，遍历结果resultSet，利用内省机制将获取字段名和字段值封装进返回对象中&lt;br&gt;⑦返回封装好的集合" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#3300FF;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="900" width="730" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
