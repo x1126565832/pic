@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-31T14:04:43.429Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="xrzUeK7XEJnO1JGCqW27" version="15.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-31T14:54:30.215Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="Xp3AdshCyLm9MnejSpWN" version="15.5.0" type="github">
   <diagram id="fpE3rJZCKHkUnjjX4ydw" name="第 1 页">
     <mxGraphModel dx="2377" dy="972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -42,8 +42,16 @@
         <mxCell id="X6iJabfwmCCyM0tsu5hm-14" value="①使用dom4j解析配置文件，将解析的内容封装到容器对象" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="410" y="373" width="160" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="X6iJabfwmCCyM0tsu5hm-16" value="②创建sqlSessionFactory对象：工厂类：生产sqlSession:会话对象（工厂模式）" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="410" y="440" width="240" height="40" as="geometry" />
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-16" target="X6iJabfwmCCyM0tsu5hm-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="520" />
+              <mxPoint x="490" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-16" value="②创建sqlSessionFactory对象：工厂类：生产sqlSession:会话对象（工厂模式）&lt;br&gt;DefaultSqlSessionFactory defaultSqlSessionFactory = new DefaultSqlSessionFactory(configuration);" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="409.5" y="436" width="450" height="60" as="geometry" />
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-10" target="X6iJabfwmCCyM0tsu5hm-14">
           <mxGeometry relative="1" as="geometry">
@@ -67,8 +75,8 @@
         <mxCell id="X6iJabfwmCCyM0tsu5hm-25" value="该方法就是使用dom4j对配置文件进行解析，封装Configuration&lt;br&gt;&lt;pre style=&quot;background-color: #2b2b2b ; color: #a9b7c6 ; font-family: &amp;#34;consolas&amp;#34; , monospace ; font-size: 11.3pt&quot;&gt;Configuration &lt;span style=&quot;color: #ffc66d&quot;&gt;parseConfig&lt;/span&gt;&lt;span style=&quot;color: #9876aa ; font-style: italic&quot;&gt;(&lt;/span&gt;InputStream in&lt;span style=&quot;color: #9876aa ; font-style: italic&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="590" y="363" width="360" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X6iJabfwmCCyM0tsu5hm-26" value="①解析sqlMapConfig.xml，读取出数据库连接信息，&lt;br&gt;②创建c3p0数据库连接池，将连接池对象封装到configration里&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span&gt;③mapper.xml解析：拿到路径--字节输入流 --- dom4j进行解析&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="945" y="310" width="340" height="50" as="geometry" />
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-26" value="&lt;font color=&quot;#ff3333&quot;&gt;方法步骤：&lt;/font&gt;&lt;br&gt;①解析sqlMapConfig.xml，读取出数据库连接信息，&lt;br&gt;②创建c3p0数据库连接池，将连接池对象封装到configration里&lt;br&gt;&lt;div&gt;&lt;span&gt;③mapper.xml解析：拿到路径--字节输入流 --- dom4j进行解析&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="945" y="305" width="350" height="60" as="geometry" />
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-28" target="X6iJabfwmCCyM0tsu5hm-22">
           <mxGeometry relative="1" as="geometry" />
@@ -82,8 +90,81 @@
         <mxCell id="X6iJabfwmCCyM0tsu5hm-31" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; private Configuration configuration;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; public XMLMapperBuilder(Configuration configuration) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.configuration = configuration;&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1080" y="490" width="330" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="X6iJabfwmCCyM0tsu5hm-32" value="&lt;pre style=&quot;background-color: #2b2b2b ; color: #a9b7c6 ; font-family: &amp;#34;consolas&amp;#34; , monospace ; font-size: 11.3pt&quot;&gt;&lt;span style=&quot;color: #cc7832&quot;&gt;void &lt;/span&gt;&lt;span style=&quot;color: #ffc66d&quot;&gt;parse&lt;/span&gt;&lt;span style=&quot;color: #9876aa ; font-style: italic&quot;&gt;(&lt;/span&gt;InputStream inputStream&lt;span style=&quot;color: #9876aa ; font-style: italic&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="870" y="430" width="310" height="50" as="geometry" />
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-32" value="解析xxxMapper.xml文件&lt;br&gt;&lt;pre style=&quot;background-color: #2b2b2b ; color: #a9b7c6 ; font-family: &amp;#34;consolas&amp;#34; , monospace ; font-size: 11.3pt&quot;&gt;&lt;span style=&quot;color: #cc7832&quot;&gt;void &lt;/span&gt;&lt;span style=&quot;color: #ffc66d&quot;&gt;parse&lt;/span&gt;&lt;span style=&quot;color: #9876aa ; font-style: italic&quot;&gt;(&lt;/span&gt;InputStream inputStream&lt;span style=&quot;color: #9876aa ; font-style: italic&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="870" y="430" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-34" value="&lt;span style=&quot;color: rgb(255 , 51 , 51)&quot;&gt;方法步骤：&lt;/span&gt;&lt;br&gt;①获取namespace的值&amp;nbsp; &amp;nbsp;&amp;lt;mapper namespace=&quot;user&quot;&amp;gt;&lt;br&gt;②循环获取select标签里的内容：id、resultType、parameterType、sql&lt;br&gt;③封装到mapperStatement&lt;br&gt;④&lt;span&gt;//put的key值为statementId&amp;nbsp; &amp;nbsp; sql的唯一标识： namespace.id来组成&amp;nbsp; statementId&lt;/span&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; String key = namespace + &quot;.&quot; + id;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; configuration.getMappedStatementMap().put(key,mappedStatement);&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="955" y="555" width="470" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-37" value="" style="endArrow=classic;html=1;rounded=0;fontColor=#FF3333;edgeStyle=orthogonalEdgeStyle;exitX=1.011;exitY=0.983;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-8" target="X6iJabfwmCCyM0tsu5hm-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="250" as="sourcePoint" />
+            <mxPoint x="1440" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1510" y="259" />
+              <mxPoint x="1510" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-38" value="f封装" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;fontColor=#FF3333;" connectable="0" vertex="1" parent="X6iJabfwmCCyM0tsu5hm-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-39" target="X6iJabfwmCCyM0tsu5hm-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-39" value="SqlSessionFactory" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="435" y="555" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-42" target="X6iJabfwmCCyM0tsu5hm-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-42" value="DefaultSqlSessionFactory" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="402.5" y="645" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-46" value="获取sqlSession对象&lt;br&gt;&lt;pre style=&quot;background-color: rgb(43 , 43 , 43) ; color: rgb(169 , 183 , 198) ; font-family: &amp;#34;consolas&amp;#34; , monospace ; font-size: 11.3pt&quot;&gt;SqlSession &lt;span style=&quot;color: rgb(255 , 198 , 109)&quot;&gt;openSession&lt;/span&gt;&lt;span style=&quot;color: rgb(152 , 118 , 170) ; font-style: italic&quot;&gt;()&lt;/span&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="545" y="545" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-47" target="X6iJabfwmCCyM0tsu5hm-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-52" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;" vertex="1" connectable="0" parent="X6iJabfwmCCyM0tsu5hm-50">
+          <mxGeometry x="-0.224" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-59" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;" vertex="1" connectable="0" parent="X6iJabfwmCCyM0tsu5hm-50">
+          <mxGeometry x="-0.224" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="-209" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-61" value="&lt;span style=&quot;font-size: 11px&quot;&gt;openSession()&lt;/span&gt;&lt;br&gt;生产SqlSession" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;" vertex="1" connectable="0" parent="X6iJabfwmCCyM0tsu5hm-50">
+          <mxGeometry x="-0.224" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="-99" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-47" value="SqlSession" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="402.5" y="765" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-49" value="DefaultSqlSession" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="402.5" y="855" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-62" value="传递configration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="584.5" y="655" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-63" value="根据传递过来的configration获取里面的MappedStatement对象&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="584.5" y="865" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-64" value="定义mapper.xml对应的方法&lt;br&gt;&amp;lt;E&amp;gt; List&amp;lt;E&amp;gt; findAll(String statementId,Object... params)等" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="590" y="770" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="1" source="X6iJabfwmCCyM0tsu5hm-65" target="X6iJabfwmCCyM0tsu5hm-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-65" value="Executor" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="660" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-66" value="SimpleExecutor" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="765" width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
