@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-31T15:15:27.797Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="KrMoMb1zfGDz4pKxYPdj" version="15.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-31T15:16:39.970Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="4lS-LiWnNFEbU5Iv2HG0" version="15.5.0" type="github">
   <diagram id="fpE3rJZCKHkUnjjX4ydw" name="第 1 页">
     <mxGraphModel dx="2377" dy="972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -169,11 +169,11 @@
         <mxCell id="X6iJabfwmCCyM0tsu5hm-49" value="DefaultSqlSession" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#333333;align=center;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="402.5" y="855" width="175" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="X6iJabfwmCCyM0tsu5hm-62" value="传递configration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-62" value="传递configration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#3300FF;" vertex="1" parent="1">
           <mxGeometry x="584.5" y="655" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-63" value="根据传递过来的configration获取里面的MappedStatement对象&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="584.5" y="865" width="340" height="20" as="geometry" />
+          <mxGeometry x="577.5" y="875" width="340" height="20" as="geometry" />
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-64" value="定义mapper.xml对应的方法&lt;br&gt;&amp;lt;E&amp;gt; List&amp;lt;E&amp;gt; findAll(String statementId,Object... params)等" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="590" y="770" width="330" height="30" as="geometry" />
@@ -204,6 +204,9 @@
         </mxCell>
         <mxCell id="X6iJabfwmCCyM0tsu5hm-74" value="①根据configration获取DataSource，注册驱动，获取链接&lt;br&gt;②根据mappedStatement获取sql语句&lt;br&gt;③获取预处理对象PrepareStatement。PreparedStatement preparedStatement = connection.prepareStatement(boundSql.getSqlText());&lt;br&gt;④根据params，设置参数：利用反射获取入参的parameterTypeClass&lt;br&gt;⑤执行sql：ResultSet resultSet = preparedStatement.executeQuery();&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;String resultType = mappedStatement.getResultType();根据返回值对象全路径获取返回值类型&lt;br&gt;⑥封装返回结果集，遍历结果resultSet，利用内省机制将获取字段名和字段值封装进返回对象中&lt;br&gt;⑦返回封装好的集合" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#3300FF;" vertex="1" parent="1">
           <mxGeometry x="-60" y="910" width="730" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="X6iJabfwmCCyM0tsu5hm-79" value="传递configration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#3300FF;" vertex="1" parent="1">
+          <mxGeometry x="577.5" y="855" width="100" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
