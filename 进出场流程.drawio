@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-03T02:15:47.197Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="0FeVqeufff_OyZ7b9zuL" version="15.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-03T02:20:46.334Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="WOX1pTe3_XcLzeJpHixd" version="15.6.6" type="github">
   <diagram id="HOYFUunCbH7317G417ku" name="第 1 页">
     <mxGraphModel dx="2500" dy="908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -154,6 +154,9 @@
         </mxCell>
         <mxCell id="ZWeCtV3K1E8GW41HwPyf-55" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
           <mxGeometry x="335" y="410" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWeCtV3K1E8GW41HwPyf-57" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;车辆进场&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;车牌被摄像头拍摄到，摄像头识别出车牌&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;向云端服务器发送数据(例如车牌号，进场时间，哪个停车场，哪个入口等数据)&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;云端服务器接收到数据，记录到数据库&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;车辆在停车场内停了2个小时(假设停车费5元/小时)&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;车主办完事了，准备离开停车场，在手机上搜索自己车牌并支付相应停车费&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;车辆出场，到停车场门口时车牌再次没摄像头拍摄到摄像头识别出车牌&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;向云端服务器发送数据(例如车牌号，进场时间，哪个停车场，哪个入口等数据)&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;云端服务器接收到数据，记录到数据库，根据现有数据判断该车辆是否已经付费&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;—-&amp;gt;车辆已经付费，匝道自动开启，整个过程很流畅，不需要停车&lt;/span&gt;" style="whiteSpace=wrap;html=1;labelBackgroundColor=default;fontColor=default;strokeColor=default;fillColor=default;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="630" width="720" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
