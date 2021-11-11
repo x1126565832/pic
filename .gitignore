@@ -1,0 +1,22 @@
+## ide
+**/.idea
+*.iml
+.idea/
+
+## backend
+**/target
+**/logs
+
+## front
+**/*.lock
+
+.project
+.settings/
+.prefs
+.pydevproject
+.idea
+.DS_Store
+.cache
+*.pyc
+*.html
+*.xlm
